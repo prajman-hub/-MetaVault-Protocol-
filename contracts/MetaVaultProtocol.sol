@@ -1,26 +1,4 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.26;
-
-/**
- * @title MetaVault Protocol
- * @notice A decentralized protocol for tokenized asset vaults, allowing users to
- *         deposit ERC20 tokens into personalized vaults and earn yield based on
- *         protocol-defined logic.
- */
-
-interface IERC20 {
-    function totalSupply() external view returns (uint256);
-    function balanceOf(address account) external view returns (uint256);
-    function transfer(address recipient, uint256 amount) external returns (bool);
-    function approve(address spender, uint256 amount) external returns (bool);
-    function allowance(address owner, address spender) external view returns (uint256);
-    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
-}
-
-contract MetaVaultProtocol {
-    address public admin;
-    uint256 public vaultCount;
-    uint256 public constant YIELD_RATE = 5; // example: 5% APY simulation
+example: 5% APY simulation
 
     struct Vault {
         uint256 id;
@@ -146,3 +124,6 @@ contract MetaVaultProtocol {
         return userVaults[_owner];
     }
 }
+// 
+End
+// 
